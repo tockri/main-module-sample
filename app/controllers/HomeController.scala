@@ -23,7 +23,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    */
   def index() = Action { implicit request: Request[AnyContent] =>
     Proj1Content.test()
-    Proj2Content.test()
-    Ok(Proj1Content.message)
+    Ok(Proj1Content.message + Proj2Content.test())
   }
 }
